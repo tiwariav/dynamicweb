@@ -1,3 +1,11 @@
+.header_slider {
+    height: 100vh;
+}
+
+.header_slider .carousel {
+    height: 100%;
+}
+
 #page-top #services .section-heading {
     font-style: normal;
     color: #494949;
@@ -131,4 +139,14 @@
     overflow: hidden;
     paddding: 10px;
   }
+}
+
+#carousel-header-ungleich .item {
+    padding-bottom: 70px;
+}
+
+#carousel-header-ungleich .carousel-indicators li,
+#carousel-header-ungleich .carousel-indicators li.active {
+    color: #000;
+    background-color: #000;
 }

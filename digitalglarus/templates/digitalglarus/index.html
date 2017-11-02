@@ -138,36 +138,55 @@
   </style>
 
   <!-- Header -->
-  <header>
-    <div class="container">
-      <div class="intro-text">
-        <div class="intro-headline">
-          <span class="intro-headline">
-            Where great minds work
-          </span>
+  <header class="header_slider">
+    <div id="carousel-header-ungleich" class="carousel slide" data-ride="carousel" data-interval="1000">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-header-ungleich" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-header-ungleich" data-slide-to="1"></li>
+        <li data-target="#carousel-header-ungleich" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <div class="container">
+            <div class="intro-text">
+              <div class="intro-headline">
+                <span class="intro-headline">
+                  Where great minds work
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="container-fluid darkened-container">
+            <h3 class="intro-small">Book a date today and dive in</h3>
+            <a href="{% url 'digitalglarus:booking' %}" class="btn btn-primary">Join now</a>
+
+            {% comment %}
+            <form class="form-inline">
+              <div class="form-group">
+                  <label class="sr-only" for="exampleInputPassword3">Pick a date</label>
+                  <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Pick a date">
+                  <div class="form-group">
+                      <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Enter email">
+                  </div>
+              </div>
+              <button type="submit" class="btn btn-primary">book a date</button>
+            </form>
+            {% endcomment %}
+          </div>
+        </div>
+        <div class="item">
+          <h1 style="color: #fff; margin-top: 150px;">slide 2</h1>
+        </div>
+        <div class="item">
+          <h1 style="color: #fff; margin-top: 150px;">slide 3</h1>
         </div>
       </div>
     </div>
-
-    <div class="container-fluid darkened-container">
-      <h3 class="intro-small">Book a date today and dive in</h3>
-      <a href="{% url 'digitalglarus:booking' %}" class="btn btn-primary">Join now</a>
-
-      {% comment %}
-      <form class="form-inline">
-        <div class="form-group">
-            <label class="sr-only" for="exampleInputPassword3">Pick a date</label>
-            <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Pick a date">
-            <div class="form-group">
-                <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Enter email">
-            </div>
-        </div>
-        <button type="submit" class="btn btn-primary">book a date</button>
-      </form>
-      {% endcomment %}
-   </div>
-
   </header>
   <!-- form section ends-->
 
