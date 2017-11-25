@@ -137,12 +137,38 @@
   }
 }
 
-#carousel-header-ungleich .item {
-    padding-bottom: 70px;
-}
 
 #carousel-header-ungleich .carousel-indicators li,
 #carousel-header-ungleich .carousel-indicators li.active {
     color: #000;
     background-color: #000;
+}
+
+.header_slider {
+    height: 100vh;
+}
+
+.header_slider > .carousel,
+.header_slider > .carousel .carousel-inner,
+.header_slider > .carousel .item {
+    height: 100%;
+}
+
+.header_slider > .carousel .item .container {
+    padding-top: 25px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header_slider > .carousel .bg_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
 }
