@@ -4,9 +4,13 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     overflow-x: hidden;
-    font-family: "Ralesay" , "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .text-muted {
@@ -237,6 +241,10 @@ fieldset[disabled] .btn-xl.active {
     background-color: #fec503;
 }
 
+.navbar-default .navbar-brand {
+   padding: 12px;
+}
+
 @media(min-width:768px) {
     .navbar-default {
 	padding: 25px 0;
@@ -263,23 +271,19 @@ fieldset[disabled] .btn-xl.active {
 	background-color: #222;
     }
 
-    .navbar-default.navbar-shrink .navbar-brand {
-	   font-size: 1.5em;
+    .navbar-default .navbar-brand {
        padding: 8px;
     }
+}
+
+.navbar-default .navbar-brand > img {
+    height: 100%;
 }
 
 header {
     text-align: center;
     color: #fff;
-    background-attachment: scroll;
-    background-image: url(../img/header-bg.jpg);
-    background-position: center center;
-    background-repeat: none;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+    background: rgba(0,0,0,0.25);
 }
 
 header .intro-text {
@@ -329,13 +333,13 @@ header .intro-text .intro-heading {
 }
 
 section {
-    padding: 100px 0;
+    padding: 75px 0;
 }
 
 section h2.section-heading {
 	margin-top: 0;
 	margin-bottom: 15px;
-	font-size: 40px;
+	font-size: 24px;
 	color: #494949;
 }
 
@@ -346,12 +350,15 @@ section h3.section-subheading {
 	font-size: 18px;
 	font-weight: 400;
 	color: #494949;
-	line-height: normal;
+	line-height: 1.4;
 }
 
 @media(min-width:768px) {
     section {
-	padding: 150px 0;
+	   padding: 125px 0;
+    }
+    section h2.section-heading {
+        font-size: 40px;
     }
 }
 
@@ -547,6 +554,10 @@ section h3.section-subheading {
     color: inherit;
 }
 
+.timeline .timeline-heading-last h4 {
+    margin-top: 15px;
+}
+
 .timeline .timeline-heading h4.subheading {
     text-transform: none;
 }
@@ -562,14 +573,14 @@ section h3.section-subheading {
     }
 
     .timeline>li {
-	margin-bottom: 100px;
+	margin-bottom: 75px;
 	min-height: 100px;
     }
 
     .timeline>li .timeline-panel {
 	float: left;
 	width: 41%;
-	padding: 0 20px 20px 30px;
+	padding: 0 20px 20px;
 	text-align: right;
     }
 
@@ -588,7 +599,7 @@ section h3.section-subheading {
 
     .timeline>li.timeline-inverted>.timeline-panel {
 	float: right;
-	padding: 0 30px 20px 20px;
+	padding: 0 20px 20px;
 	text-align: left;
     }
 }
@@ -599,7 +610,7 @@ section h3.section-subheading {
     }
 
     .timeline>li .timeline-panel {
-	padding: 0 20px 20px;
+	padding: 10px 20px 20px;
     }
 
     .timeline>li .timeline-image {
@@ -614,8 +625,12 @@ section h3.section-subheading {
 	line-height: 26px;
     }
 
+    .timeline .timeline-heading-last h4 {
+    margin-top: 45px;
+    }
+
     .timeline>li.timeline-inverted>.timeline-panel {
-	padding: 0 20px 20px;
+	padding: 10px 20px 20px;
     }
 }
 
@@ -625,7 +640,7 @@ section h3.section-subheading {
     }
 
     .timeline>li .timeline-panel {
-	padding: 0 20px 20px 100px;
+	padding: 10px 20px 20px 100px;
     }
 
     .timeline>li .timeline-image {
@@ -912,29 +927,6 @@ logo-image {
     color: #fff;
     background-color: #fed136;
 }
-
-
-intro-cap {
-    margin-bottom: 25px;
-    text-transform: uppercase;
-    font-family: 'Raleway', "Helvetica Neue", "Helvetica Neue", Helvetica,Arial,sans-serif;
-	font-size: 24px;
-    font-weight: 400;
-    line-height: 50px;
-	color:#fff
-    background-color: #fed136;
-}
-h6 intro-smallcap {
-    margin-bottom: 25px;
-    text-transform: none;
-    font-family:'Raleway' , Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-	font-size: 18px;
-    font-weight: 400;
-    line-height: 50px;
-	color:#fff
-    background-color: #fed136;
-}
-
 
 .carousel-indicators li.active, .text-carousel .carousel-indicators li.active {
   width: 15px;
