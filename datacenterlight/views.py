@@ -110,9 +110,7 @@ class IndexView(CreateView):
         pricing_name = request.POST.get('pricing_name')
         vm_pricing = VMPricing.get_vm_pricing_by_name(pricing_name)
 
-        template = VMTemplate.objects.filter(
-            opennebula_vm_template_id=template_id
-        ).first()
+        template = VMTemplate.objects.get(pk=template_id)
         template_data = VMTemplateSerializer(template).data
         referer_url = request.META['HTTP_REFERER']
 

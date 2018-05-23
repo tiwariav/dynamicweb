@@ -91,7 +91,7 @@
             <label for="config">OS</label>
             <select name="config">
                 {% for template in templates %}
-                <option value="{{template.opennebula_vm_template_id}}">{{template.name}}</option>
+                <option value="{{template.pk}}">{{template.name}}</option>
                 {% endfor %}
             </select>
         </div>
